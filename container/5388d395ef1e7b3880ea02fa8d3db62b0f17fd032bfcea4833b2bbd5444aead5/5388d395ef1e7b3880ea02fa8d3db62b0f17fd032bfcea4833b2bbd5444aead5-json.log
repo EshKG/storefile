@@ -1,0 +1,57 @@
+{"log":"\u001b[32mINFO\u001b[0m:     Started server process [\u001b[36m1\u001b[0m]\r\n","stream":"stdout","time":"2024-02-13T13:18:50.650747103Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Waiting for application startup.\r\n","stream":"stdout","time":"2024-02-13T13:18:50.650794176Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Application startup complete.\r\n","stream":"stdout","time":"2024-02-13T13:18:50.650796566Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Uvicorn running on \u001b[1mhttp://0.0.0.0:80\u001b[0m (Press CTRL+C to quit)\r\n","stream":"stdout","time":"2024-02-13T13:18:50.651091063Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:46114 - \"\u001b[1mGET /docs HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:18:59.237040488Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:46114 - \"\u001b[1mGET /openapi.json HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:18:59.40988891Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:46120 - \"\u001b[1mPOST /v2/upload HTTP/1.1\u001b[0m\" \u001b[91m500 Internal Server Error\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:19:33.695317539Z"}
+{"log":"\u001b[31mERROR\u001b[0m:    Exception in ASGI application\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697290928Z"}
+{"log":"Traceback (most recent call last):\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697313344Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py\", line 373, in run_asgi\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697316179Z"}
+{"log":"    result = await app(self.scope, self.receive, self.send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697318686Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py\", line 75, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697320863Z"}
+{"log":"    return await self.app(scope, receive, send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697323705Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/fastapi/applications.py\", line 208, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697326085Z"}
+{"log":"    await super().__call__(scope, receive, send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.69732858Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/applications.py\", line 112, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697330924Z"}
+{"log":"    await self.middleware_stack(scope, receive, send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697333325Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py\", line 181, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697335338Z"}
+{"log":"    raise exc from None\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697337843Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py\", line 159, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697340115Z"}
+{"log":"    await self.app(scope, receive, _send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.69734256Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/exceptions.py\", line 82, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697344937Z"}
+{"log":"    raise exc from None\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697347156Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/exceptions.py\", line 71, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697349392Z"}
+{"log":"    await self.app(scope, receive, sender)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697351929Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/routing.py\", line 580, in __call__\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697354147Z"}
+{"log":"    await route.handle(scope, receive, send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697356828Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/routing.py\", line 241, in handle\r\n","stream":"stdout","time":"2024-02-13T13:19:33.69735898Z"}
+{"log":"    await self.app(scope, receive, send)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697376742Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/starlette/routing.py\", line 52, in app\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697379466Z"}
+{"log":"    response = await func(request)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697382636Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/fastapi/routing.py\", line 226, in app\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697385849Z"}
+{"log":"    raw_response = await run_endpoint_function(\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697388881Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/fastapi/routing.py\", line 159, in run_endpoint_function\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697391008Z"}
+{"log":"    return await dependant.call(**values)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697393429Z"}
+{"log":"  File \"/app/./app/main.py\", line 108, in upload\r\n","stream":"stdout","time":"2024-02-13T13:19:33.69739548Z"}
+{"log":"    if(len(check_db(str(UUID)))==0):\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697398298Z"}
+{"log":"  File \"/app/./app/main.py\", line 42, in check_db\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697402206Z"}
+{"log":"    cur.execute(query)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697404366Z"}
+{"log":"  File \"/usr/local/lib/python3.9/site-packages/psycopg2/extras.py\", line 146, in execute\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697406604Z"}
+{"log":"    return super().execute(query, vars)\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697408757Z"}
+{"log":"psycopg2.errors.UndefinedColumn: column \"UUID\" does not exist\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697411913Z"}
+{"log":"LINE 3:               AND \"UUID\" like 'c5348ac4-870b-58b1-bc60-c4fba...\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697414219Z"}
+{"log":"                          ^\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697416553Z"}
+{"log":"\r\n","stream":"stdout","time":"2024-02-13T13:19:33.697419081Z"}
+{"log":"^C\u001b[32mINFO\u001b[0m:     Shutting down\r\n","stream":"stdout","time":"2024-02-13T13:22:44.604893268Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Waiting for application shutdown.\r\n","stream":"stdout","time":"2024-02-13T13:22:44.705535027Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Application shutdown complete.\r\n","stream":"stdout","time":"2024-02-13T13:22:44.705654553Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Finished server process [\u001b[36m1\u001b[0m]\r\n","stream":"stdout","time":"2024-02-13T13:22:44.705681579Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Started server process [\u001b[36m1\u001b[0m]\r\n","stream":"stdout","time":"2024-02-13T13:23:21.158265156Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Waiting for application startup.\r\n","stream":"stdout","time":"2024-02-13T13:23:21.158297585Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Application startup complete.\r\n","stream":"stdout","time":"2024-02-13T13:23:21.158299767Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     Uvicorn running on \u001b[1mhttp://0.0.0.0:80\u001b[0m (Press CTRL+C to quit)\r\n","stream":"stdout","time":"2024-02-13T13:23:21.158805062Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:35742 - \"\u001b[1mGET /docs HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:23:26.025596091Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:35742 - \"\u001b[1mGET /openapi.json HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:23:26.135124696Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:35754 - \"\u001b[1mPOST /v2/upload HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:23:37.614849316Z"}
+{"log":"\u001b[32mINFO\u001b[0m:     172.17.0.1:55206 - \"\u001b[1mGET /v1/download?UUID=c5348ac4-870b-58b1-bc60-c4fba749f57c HTTP/1.1\u001b[0m\" \u001b[32m200 OK\u001b[0m\r\n","stream":"stdout","time":"2024-02-13T13:24:00.231843011Z"}
