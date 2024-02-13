@@ -25,6 +25,15 @@
 ##### 2) Для базы данных:
 
 ```docker run --name postgresql -p 5432:5432 -e POSTGRES_PASSWORD=postgresql -e POSTGRES_USER=postgresql -e POSTGRES_DB=storefile_db  -e PGDATA=/var/lib/postgresql/data/pgdata -v volume_1:/var/lib/postgresql/data -d postgres``` 
+#### После того как поднят сервер базы данных, необходимо выполнить sql запрос для создания таблицы хранения параметров файлов. Я делал запрос через dbeaver
+```CREATE TABLE storefile_db.public.file_storage (
+id SERIAL PRIMARY key,
+"UUID" varchar,
+"FILENAME" varchar,
+"UPLOAD_DATE" varchar
+);
+ ```
+
 
 ##### Теперь API доступен по адресу http://localhost/docs, а контейнеры можно запускать и отключать командами:
 ```docker start server ```
